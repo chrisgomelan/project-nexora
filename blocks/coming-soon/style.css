@@ -1,0 +1,286 @@
+.nexora-coming-soon {
+    position: relative !important;
+    background-color: #CDD3DF !important;
+    padding: 60px 20px !important;
+    margin: 60px 0 !important;
+    box-sizing: border-box !important;
+}
+
+@media (min-width: 768px) {
+    .nexora-coming-soon {
+        margin: 100px 0 !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .nexora-coming-soon {
+        flex-direction: row;
+        align-items: center;
+        padding: 100px 5% !important;
+        margin: 150px 0 !important;
+        min-height: 600px;
+    }
+}
+
+.nexora-coming-soon__title {
+    text-transform: none !important;
+    letter-spacing: normal !important;
+    margin-bottom: 20px;
+    color: var(--wp--preset--color--nexora-navy, #072567);
+    font-size: 32px !important;
+    line-height: 1.2 !important;
+}
+
+@media (min-width: 768px) {
+    .nexora-coming-soon__title {
+        font-size: 48px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .nexora-coming-soon__title {
+        font-size: 64px !important;
+    }
+}
+
+.nexora-coming-soon__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+}
+
+@media (min-width: 992px) {
+    .nexora-coming-soon__content {
+        width: 50%;
+    }
+}
+
+.nexora-coming-soon__content-inner {
+    width: 100%;
+}
+
+.nexora-coming-soon__description {
+    margin-bottom: 40px;
+    color: var(--wp--preset--color--nexora-navy, #072567);
+    font-size: 16px !important;
+}
+
+@media (min-width: 768px) {
+    .nexora-coming-soon__description {
+        font-size: 20px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .nexora-coming-soon__description {
+        font-size: 24px !important;
+    }
+}
+
+.nexora-coming-soon__timer {
+    margin-bottom: 50px;
+    padding: 20px 0;
+}
+
+@media (min-width: 768px) {
+    .nexora-coming-soon__timer {
+        padding: 30px 0;
+    }
+}
+
+.sl-flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: var(--wp--preset--color--nexora-navy, #072567);
+}
+
+@media (min-width: 480px) {
+    .sl-flex-container {
+        gap: 15px;
+    }
+}
+
+.sl-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sl-unit span {
+    font-family: var(--wp--preset--font-family--poppins, Poppins, sans-serif);
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1;
+}
+
+@media (min-width: 480px) {
+    .sl-unit span {
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 768px) {
+    .sl-unit span {
+        font-size: 64px;
+    }
+}
+
+.sl-unit p {
+    font-family: var(--wp--preset--font-family--poppins, Poppins, sans-serif);
+    font-weight: 500;
+    font-size: 12px;
+    margin: 5px 0 0;
+    line-height: 1;
+}
+
+@media (min-width: 480px) {
+    .sl-unit p {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 768px) {
+    .sl-unit p {
+        font-size: 24px;
+    }
+}
+
+.sl-sep {
+    font-family: var(--wp--preset--font-family--poppins, Poppins, sans-serif);
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1;
+    align-self: flex-start;
+}
+
+@media (min-width: 480px) {
+    .sl-sep {
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 768px) {
+    .sl-sep {
+        font-size: 64px;
+    }
+}
+
+.nexora-coming-soon__subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.nexora-coming-soon__subscribe h4 {
+    margin-bottom: 20px;
+    color: var(--wp--preset--color--nexora-navy, #072567);
+    font-size: 18px !important;
+}
+
+@media (min-width: 768px) {
+    .nexora-coming-soon__subscribe h4 {
+        font-size: 24px !important;
+    }
+}
+
+.nexora-coming-soon__form {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    gap: 10px;
+    flex-direction: column;
+}
+
+@media (min-width: 480px) {
+    .nexora-coming-soon__form {
+        flex-direction: row;
+    }
+}
+
+.nexora-coming-soon__input {
+    flex: 1;
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: none;
+    font-family: var(--wp--preset--font-family--poppins, Poppins, sans-serif);
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.nexora-coming-soon__button {
+    width: 100%;
+    background-color: var(--wp--preset--color--nexora-navy, #072567);
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: var(--wp--preset--font-family--poppins, Poppins, sans-serif);
+    font-weight: 600;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: opacity 0.3s;
+    box-sizing: border-box;
+}
+
+@media (min-width: 480px) {
+    .nexora-coming-soon__button {
+        width: auto;
+    }
+}
+
+.nexora-coming-soon__button:hover {
+    opacity: 0.9;
+}
+
+.nexora-coming-soon__image-container {
+    position: relative;
+    width: 100%;
+    min-height: 250px;
+    margin-top: 40px;
+    z-index: 3;
+}
+
+@media (min-width: 480px) {
+    .nexora-coming-soon__image-container {
+        min-height: 350px;
+    }
+}
+
+@media (min-width: 992px) {
+    .nexora-coming-soon__image-container {
+        position: absolute;
+        right: 8%;
+        top: -8%;
+        bottom: -8%;
+        width: 40%;
+        min-height: auto;
+        margin-top: 0;
+    }
+}
+
+.nexora-coming-soon__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+@media (min-width: 992px) {
+    .nexora-coming-soon__image {
+        border-radius: 0;
+    }
+}

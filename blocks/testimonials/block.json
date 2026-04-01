@@ -1,0 +1,39 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "nexora/testimonials",
+    "version": "1.0.0",
+    "title": "Nexora Testimonials",
+    "category": "design",
+    "description": "A three-column testimonials section with profile images and quotes.",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "What Our Clients Say"
+        },
+        "testimonials": {
+            "type": "array",
+            "default": [
+                {
+                    "imageUrl": "/wp-content/uploads/2026/03/client1.webp",
+                    "quote": "Nexora helped us increase traffic by 200% in three months, their tech-driven approach is unmatched.",
+                    "author": "Sarah L., Growth Manager at LuminaTech"
+                },
+                {
+                    "imageUrl": "/wp-content/uploads/2026/03/client2.webp",
+                    "quote": "Partnering with Nexora transformed our online presence. Their data-driven strategy helped us reach new audiences and double our conversions.",
+                    "author": "Mark R., Marketing Director at NovaEdge"
+                },
+                {
+                    "imageUrl": "/wp-content/uploads/2026/03/client3.webp",
+                    "quote": "The Nexora team truly understands how to merge creativity with technology. Our brand visibility and engagement skyrocketed within weeks.",
+                    "author": "Jasmine C., CEO of Cloudify Media"
+                }
+            ]
+        }
+    },
+    "textdomain": "child-nexora",
+    "editorScript": "file:./index.js",
+    "style": "file:./style.css",
+    "render": "file:./render.php"
+}

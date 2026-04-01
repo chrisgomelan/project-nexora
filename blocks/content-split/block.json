@@ -1,0 +1,71 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "nexora/content-split",
+    "version": "1.0.0",
+    "title": "Content Split Section",
+    "category": "theme",
+    "icon": "columns",
+    "description": "Two-column split section: Text on one side, Image on the other. Supports reverse layout.",
+    "keywords": [
+        "split",
+        "section",
+        "nexora"
+    ],
+    "textdomain": "child-nexora",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Why Choose Nexora?"
+        },
+        "description": {
+            "type": "string",
+            "default": "At Nexora, we fuse data, creativity, and technology to drive measurable growth."
+        },
+        "description2": {
+            "type": "string",
+            "default": ""
+        },
+        "slogan": {
+            "type": "string",
+            "default": ""
+        },
+        "buttonText": {
+            "type": "string",
+            "default": "Learn More"
+        },
+        "buttonUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "showButton": {
+            "type": "boolean",
+            "default": false
+        },
+        "imageUrl": {
+            "type": "string",
+            "default": "/wp-content/uploads/2026/03/placeholder.webp"
+        },
+        "imageAlt": {
+            "type": "string",
+            "default": "Content Image"
+        },
+        "reverseLayout": {
+            "type": "boolean",
+            "default": false
+        },
+        "headingLevel": {
+            "type": "number",
+            "default": 2
+        }
+    },
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "style": "file:./style.css",
+    "render": "file:./render.php"
+}

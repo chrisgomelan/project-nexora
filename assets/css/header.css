@@ -1,0 +1,218 @@
+/* =========================================
+   Nexora Header — CSS-only overrides
+   (Colors, typography & spacing are in theme.json)
+   ========================================= */
+
+/* Glassmorphism + stacking — not possible in theme.json */
+.nexora-header {
+    position: sticky !important;
+    top: 0 !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 9999 !important;
+    transition: box-shadow 0.3s ease;
+}
+
+/* 3-equal-column grid: logo | nav (always centered) | button */
+.nexora-header__inner.wp-block-group {
+    display: grid !important;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.nexora-header__logo {
+    justify-self: start;
+}
+
+.nexora-header__nav {
+    justify-self: center;
+}
+
+.nexora-header__cta {
+    justify-self: end;
+}
+
+
+/* Shadow that appears on scroll (toggled by header.js) */
+.nexora-header.is-scrolled {
+    box-shadow: 0 4px 24px rgba(7, 37, 103, 0.08);
+}
+
+/* Nav link font — explicit override since header renders via do_blocks() not wp:template-part */
+.nexora-header .wp-block-navigation a {
+    font-family: var(--wp--preset--font-family--poppins) !important;
+    font-weight: 500 !important;
+    font-size: clamp(16px, 1.52vw, 20px) !important;
+    line-height: 1 !important;
+    letter-spacing: 0 !important;
+    color: #072567 !important;
+    text-decoration: none !important;
+    text-transform: uppercase !important;
+}
+
+.nexora-header .wp-block-navigation a:hover {
+    color: var(--wp--preset--color--nexora-accent, #3F4BE1) !important;
+}
+
+/* Gap between each nav item */
+.nexora-header .wp-block-navigation .wp-block-navigation__container {
+    gap: 40px !important;
+}
+
+/* Book Now hover + lift — theme.json has no :hover support */
+.nexora-header .wp-block-button.is-style-nexora-primary .wp-block-button__link {
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.nexora-header .wp-block-button.is-style-nexora-primary .wp-block-button__link:hover {
+    background-color: var(--wp--preset--color--nexora-accent, #3F4BE1) !important;
+    transform: translateY(-1px);
+}
+
+/* ── Responsive Header ────────────────── */
+@media (max-width: 1024px) {
+    .nexora-header__inner.wp-block-group {
+        display: flex !important;
+        justify-content: space-between !important;
+        padding-top: 12px !important;
+        padding-bottom: 12px !important;
+    }
+
+    .nexora-header__nav {
+        order: 2;
+    }
+
+    .nexora-header__cta.desktop-cta {
+        display: none !important;
+    }
+
+    /* Burger Menu Icon visibility & sizing */
+    .wp-block-navigation__responsive-container-open {
+        display: flex !important;
+        background: transparent !important;
+        border: none !important;
+        color: #072567 !important;
+        padding: 8px !important;
+        cursor: pointer;
+        z-index: 1000;
+        visibility: visible !important;
+    }
+
+    /* Base Responsive Container (HIDDEN by default) */
+    .wp-block-navigation__responsive-container {
+        display: none !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }
+
+    /* Hide OPEN button and Logo explicitly when modal is active */
+    .has-modal-open .nexora-header__logo,
+    .has-modal-open .wp-block-navigation__responsive-container-open {
+        display: none !important;
+    }
+
+    .wp-block-navigation__responsive-container-close {
+        display: flex !important;
+        background: transparent !important;
+        border: none !important;
+        color: #072567 !important;
+        padding: 8px !important;
+        cursor: pointer;
+        position: fixed !important;
+        /* Fixed to viewport for modal overlay */
+        top: 20px !important;
+        right: 30px !important;
+        z-index: 100002 !important;
+    }
+
+    .wp-block-navigation__responsive-container-open svg,
+    .wp-block-navigation__responsive-container-close svg {
+        width: 32px !important;
+        height: 32px !important;
+        fill: currentColor !important;
+    }
+
+    /* Overlay Modal Logic (SHOWING when class is added by JS) */
+    .wp-block-navigation__responsive-container.is-menu-open {
+        display: flex !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        background-color: #ffffff !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        z-index: 100001 !important;
+        padding: 0 !important;
+    }
+
+    .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content {
+        width: 100% !important;
+        height: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item {
+        margin: clamp(10px, 2vh, 20px) 0 !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item a {
+        font-size: clamp(24px, 5vw, 32px) !important;
+        color: #072567 !important;
+        text-transform: uppercase !important;
+        font-weight: 700 !important;
+        display: inline-block !important;
+        text-decoration: none !important;
+    }
+
+    /* Mobile CTA inside menu */
+    .mobile-cta {
+        display: block !important;
+        margin-top: 30px !important;
+        width: 100%;
+        text-align: center;
+        padding: 0 40px;
+        box-sizing: border-box;
+    }
+
+    .mobile-cta .wp-block-button__link {
+        width: 100% !important;
+        display: block !important;
+        padding: 16px !important;
+        font-size: 18px !important;
+        border-radius: 10px !important;
+        background-color: #072567 !important;
+        color: #ffffff !important;
+        text-shadow: none;
+    }
+
+    /* Override WP default list styling in overlay */
+    .wp-block-navigation__responsive-container-content ul {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        list-style: none !important;
+        width: 100% !important;
+    }
+}
+
+/* Ensure mobile-only CTA is hidden on desktop */
+@media (min-width: 1025px) {
+    .mobile-cta {
+        display: none !important;
+    }
+}

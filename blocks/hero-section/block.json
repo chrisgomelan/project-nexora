@@ -1,0 +1,62 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "nexora/hero-section",
+    "version": "1.0.0",
+    "title": "Hero Section",
+    "category": "theme",
+    "icon": "cover-image",
+    "description": "Two-column hero: text (H1, paragraph, CTA button) on the left, full-height image on the right.",
+    "keywords": [
+        "hero",
+        "banner",
+        "nexora"
+    ],
+    "textdomain": "child-nexora",
+    "attributes": {
+        "heading": {
+            "type": "string",
+            "default": "Your Growth, Powered by Strategy & Technology."
+        },
+        "paragraph": {
+            "type": "string",
+            "default": "We use data-driven strategies and innovative technology to accelerate your brand's growth with measurable results."
+        },
+        "buttonText": {
+            "type": "string",
+            "default": "Start Your Journey"
+        },
+        "buttonUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "imageUrl": {
+            "type": "string",
+            "default": "/wp-content/uploads/2026/03/hero.webp"
+        },
+        "imageAlt": {
+            "type": "string",
+            "default": "Business team in a modern office"
+        },
+        "backgroundColor": {
+            "type": "string",
+            "default": "#8B9CB8"
+        },
+        "showButton": {
+            "type": "boolean",
+            "default": true
+        }
+    },
+    "supports": {
+        "html": false,
+        "align": [
+            "full"
+        ],
+        "spacing": {
+            "margin": false,
+            "padding": false
+        }
+    },
+    "style": "file:./style.css",
+    "render": "file:./render.php"
+}

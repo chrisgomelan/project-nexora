@@ -1,0 +1,287 @@
+/* =========================================
+   nexora/footer Block Styles
+   ========================================= */
+
+.nexora-footer {
+    width: 100%;
+    background-color: #07256740;
+    padding: 80px 0 40px;
+    color: var(--wp--preset--color--nexora-navy, #072567);
+    font-family: var(--wp--preset--font-family--inter), sans-serif;
+}
+
+.nexora-footer__inner {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nexora-footer__logo {
+    margin-bottom: 40px;
+}
+
+.nexora-footer__logo img {
+    height: auto;
+}
+
+.nexora-footer__divider {
+    width: 100%;
+    border: 0;
+    border-top: 1px solid #072567;
+    margin: 0 0 40px 0;
+}
+
+/* ── Navigation ────────────────────────── */
+.nexora-footer__nav {
+    margin-bottom: 60px;
+    width: 100%;
+}
+
+.nexora-footer__nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.nexora-footer__nav-item a {
+    text-decoration: none;
+    color: var(--wp--preset--color--nexora-navy, #072567);
+    font-family: var(--wp--preset--font-family--inter), sans-serif;
+    font-weight: 500;
+    font-size: clamp(12.8px, 1.21vw, 16px);
+    /* Adjusted to be elegant, theme.json said 20px but that might be too large for footer */
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: opacity 0.3s ease;
+}
+
+.nexora-footer__nav-item a:hover {
+    opacity: 0.7;
+}
+
+/* ── Info Grid ─────────────────────────── */
+.nexora-footer__grid {
+    width: 100%;
+    min-height: 108px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid #072567;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.nexora-footer__grid-col {
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-right: 1px solid #072567;
+}
+
+.nexora-footer__col-social {
+    padding: 0;
+    justify-content: space-between;
+}
+
+.nexora-footer__grid-col:last-child {
+    border-right: none;
+}
+
+/* Social Col */
+.nexora-footer__email {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.nexora-footer__email a {
+    color: var(--wp--preset--color--nexora-navy, #072567);
+    text-decoration: none;
+    font-family: var(--wp--preset--font-family--inter, 'Inter'), sans-serif;
+    font-weight: 600;
+    font-size: clamp(16px, 1.52vw, 20px);
+    line-height: 1;
+    /* 100% */
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.nexora-footer__social-icons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    background-color: transparent;
+    border-top: 1px solid #072567;
+    width: 100%;
+}
+
+.nexora-footer__social-box {
+    height: 85px;
+    /* Increased height as requested */
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #072567;
+}
+
+.nexora-footer__social-box:last-child {
+    border-right: none;
+}
+
+.nexora-footer__social-link {
+    color: var(--wp--preset--color--nexora-navy, #072567);
+    font-size: clamp(24px, 2.27vw, 30px);
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nexora-footer__social-link:hover {
+    background-color: var(--wp--preset--color--nexora-navy, #072567);
+    color: #fff;
+}
+
+/* Address Col */
+.nexora-footer__address-title {
+    font-weight: 700 !important;
+    font-size: clamp(12.8px, 1.21vw, 16px);
+    margin-bottom: 12px;
+}
+
+.nexora-footer__address-text {
+    font-size: clamp(12px, 1.14vw, 15px);
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.nexora-footer__phone {
+    font-weight: 400;
+    font-size: clamp(12px, 1.14vw, 15px);
+}
+
+/* Hours Col */
+.nexora-footer__hours-title {
+    font-family: var(--wp--preset--font-family--poppins, 'Poppins'), sans-serif;
+    font-weight: 600;
+    font-size: clamp(12px, 1.14vw, 15px);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    color: #072567;
+}
+
+.nexora-footer__hours-time {
+    font-family: var(--wp--preset--font-family--poppins, 'Poppins'), sans-serif;
+    font-weight: 500;
+    font-size: clamp(12px, 1.14vw, 15px);
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    color: #072567;
+}
+
+.nexora-footer__hours-note {
+    font-family: var(--wp--preset--font-family--poppins, 'Poppins'), sans-serif;
+    font-weight: 400;
+    font-size: clamp(12px, 1.14vw, 15px);
+    text-transform: uppercase;
+    color: #072567;
+}
+
+/* ── Copyright ────────────────────────── */
+.nexora-footer__copyright {
+    font-family: var(--wp--preset--font-family--poppins, 'Poppins'), sans-serif;
+    font-size: clamp(12px, 1.14vw, 15px);
+    font-weight: 300;
+    color: #072567;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* ── Responsive ────────────────────────── */
+@media (max-width: 1024px) {
+    .nexora-footer {
+        padding: 60px 0 40px;
+    }
+
+    .nexora-footer__logo {
+        margin-bottom: 32px;
+    }
+
+    .nexora-footer__grid {
+        grid-template-columns: 1fr !important;
+        max-width: 500px;
+        /* Constrain stacked width for better look */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .nexora-footer__grid-col {
+        border-right: none !important;
+        border-bottom: 1px solid #072567;
+        padding: 30px 20px !important;
+    }
+
+    .nexora-footer__grid-col:last-child {
+        border-bottom: none !important;
+    }
+
+    .nexora-footer__col-social {
+        padding: 0 !important;
+        /* Keep email/social boxes flush */
+    }
+}
+
+@media (max-width: 768px) {
+    .nexora-footer__nav-list {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 10px !important;
+        text-align: center;
+    }
+
+    .nexora-footer__nav-item {
+        width: 100% !important;
+    }
+
+    .nexora-footer__nav-item a {
+        font-size: 14px !important;
+    }
+
+    .nexora-footer__copyright {
+        font-size: 12px !important;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nexora-footer__nav-list {
+        grid-template-columns: 1fr;
+    }
+
+    .nexora-footer__social-box {
+        height: 70px;
+        /* Slightly smaller on very narrow phones */
+    }
+
+    .nexora-footer__email a {
+        font-size: 16px !important;
+    }
+}

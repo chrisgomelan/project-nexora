@@ -1,0 +1,118 @@
+/* =========================================
+   nexora/scroll-curtain-reveal Styles
+   ========================================= */
+
+.nexora-reveal {
+    width: 100%;
+    overflow: hidden;
+}
+
+.nexora-reveal__inner {
+    width: 100%;
+}
+
+/* ── Base Animatable Targets ──────────────── */
+.nexora-reveal .wp-block-column,
+.nexora-reveal .nexora-hero__columns>*,
+.nexora-reveal .nexora-split-section__inner>*,
+.nexora-reveal .nexora-testimonials__grid>*,
+.nexora-reveal .nexora-mission-vision__cards>*,
+.nexora-reveal .nexora-wcu__grid>*,
+.nexora-reveal .nexora-coming-soon__content,
+.nexora-reveal .nexora-coming-soon__image-container {
+    transition: transform 1.8s cubic-bezier(0.22, 1, 0.36, 1), opacity 1.4s ease;
+    opacity: 0;
+}
+
+/* ── 1 Column Logic (Whole Block Fade Up) ─── */
+.nexora-reveal--col-1 .nexora-reveal__inner>* {
+    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 1s ease;
+    transform: translateY(60px) scale(0.95);
+    opacity: 0;
+}
+
+/* Prevent double animation on wrapped items for col-1 */
+.nexora-reveal--col-1 .wp-block-column,
+.nexora-reveal--col-1 .nexora-hero__columns>*,
+.nexora-reveal--col-1 .nexora-split-section__inner>*,
+.nexora-reveal--col-1 .nexora-testimonials__grid>*,
+.nexora-reveal--col-1 .nexora-mission-vision__cards>*,
+.nexora-reveal--col-1 .nexora-wcu__grid>*,
+.nexora-reveal--col-1 .nexora-coming-soon__content,
+.nexora-reveal--col-1 .nexora-coming-soon__image-container {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+/* ── 2 Columns Logic (Curtains) ───────────── */
+/* Elements on the Left side visually drop in from the Left (-50vw) */
+.nexora-reveal--col-2 .wp-block-column:first-child,
+.nexora-reveal--col-2 .nexora-hero__columns>*:first-child,
+.nexora-reveal--col-2 .nexora-split-section:not(.is-reversed) .nexora-split-section__inner>*:first-child,
+.nexora-reveal--col-2 .nexora-split-section.is-reversed .nexora-split-section__inner>*:last-child,
+.nexora-reveal--col-2 .nexora-testimonials__grid>*:first-child,
+.nexora-reveal--col-2 .nexora-mission-vision__cards>*:first-child,
+.nexora-reveal--col-2 .nexora-wcu__grid>*:nth-child(odd),
+.nexora-reveal--col-2 .nexora-coming-soon__content {
+    transform: translateX(-50vw);
+}
+
+/* Elements on the Right side visually drop in from the Right (50vw) */
+.nexora-reveal--col-2 .wp-block-column:last-child,
+.nexora-reveal--col-2 .nexora-hero__columns>*:last-child,
+.nexora-reveal--col-2 .nexora-split-section:not(.is-reversed) .nexora-split-section__inner>*:last-child,
+.nexora-reveal--col-2 .nexora-split-section.is-reversed .nexora-split-section__inner>*:first-child,
+.nexora-reveal--col-2 .nexora-testimonials__grid>*:last-child,
+.nexora-reveal--col-2 .nexora-mission-vision__cards>*:last-child,
+.nexora-reveal--col-2 .nexora-wcu__grid>*:nth-child(even),
+.nexora-reveal--col-2 .nexora-coming-soon__image-container {
+    transform: translateX(50vw);
+}
+
+/* ── 3 Columns Logic (Curtains + Fade) ────── */
+.nexora-reveal--col-3 .wp-block-column:first-child,
+.nexora-reveal--col-3 .nexora-testimonials__grid>*:first-child {
+    transform: translateX(-50vw);
+}
+
+.nexora-reveal--col-3 .wp-block-column:nth-child(2),
+.nexora-reveal--col-3 .nexora-testimonials__grid>*:nth-child(2) {
+    transform: scale(0.9);
+}
+
+.nexora-reveal--col-3 .wp-block-column:last-child,
+.nexora-reveal--col-3 .nexora-testimonials__grid>*:last-child {
+    transform: translateX(50vw);
+}
+
+/* ── Reveal Activation ──────────────────── */
+.nexora-reveal.is-animated .nexora-reveal__inner>*,
+.nexora-reveal.is-animated .wp-block-column,
+.nexora-reveal.is-animated .nexora-hero__columns>*,
+.nexora-reveal.is-animated .nexora-split-section__inner>*,
+.nexora-reveal.is-animated .nexora-testimonials__grid>*,
+.nexora-reveal.is-animated .nexora-mission-vision__cards>*,
+.nexora-reveal.is-animated .nexora-wcu__grid>*,
+.nexora-reveal.is-animated .nexora-coming-soon__content,
+.nexora-reveal.is-animated .nexora-coming-soon__image-container {
+    opacity: 1 !important;
+    transform: translate(0, 0) scale(1) !important;
+}
+
+/* ── Scroll Offset Logic for Mobile ─────── */
+@media (max-width: 991px) {
+
+    /* Always fallback to gentle vertical slide on mobile to prevent horizontal overflow bugs */
+    .nexora-reveal--col-2 .wp-block-column,
+    .nexora-reveal--col-2 .nexora-hero__columns>*,
+    .nexora-reveal--col-2 .nexora-split-section__inner>*,
+    .nexora-reveal--col-2 .nexora-mission-vision__cards>*,
+    .nexora-reveal--col-2 .nexora-wcu__grid>*,
+    .nexora-reveal--col-2 .nexora-coming-soon__content,
+    .nexora-reveal--col-2 .nexora-coming-soon__image-container,
+    .nexora-reveal--col-3 .wp-block-column,
+    .nexora-reveal--col-3 .nexora-testimonials__grid>* {
+        transform: translateY(60px) !important;
+    }
+}

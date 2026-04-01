@@ -1,0 +1,70 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "nexora/about-section-hero",
+    "version": "1.0.0",
+    "title": "About Section Hero",
+    "category": "theme",
+    "icon": "cover-image",
+    "description": "Full-width hero with H1 heading, H3 subheading, and primary/secondary buttons.",
+    "keywords": [
+        "hero",
+        "about",
+        "nexora"
+    ],
+    "textdomain": "child-nexora",
+    "attributes": {
+        "heading": {
+            "type": "string",
+            "default": "Accelerating Brand Growth Through Data & Intelligent Technology"
+        },
+        "description": {
+            "type": "string",
+            "default": "Nexora is a data-driven digital agency leveraging advanced analytics, automation, and innovative technology to deliver measurable, scalable growth for modern brands."
+        },
+        "primaryButtonText": {
+            "type": "string",
+            "default": "Work With Nexora"
+        },
+        "primaryButtonUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "secondaryButtonText": {
+            "type": "string",
+            "default": "Explore Our Approach"
+        },
+        "secondaryButtonUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "imageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "showPrimaryButton": {
+            "type": "boolean",
+            "default": true
+        },
+        "showSecondaryButton": {
+            "type": "boolean",
+            "default": true
+        }
+    },
+    "supports": {
+        "html": false,
+        "align": [
+            "full"
+        ],
+        "spacing": {
+            "margin": false,
+            "padding": false
+        }
+    },
+    "style": "file:./style.css",
+    "render": "file:./render.php"
+}

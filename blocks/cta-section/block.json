@@ -1,0 +1,38 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "nexora/cta-section",
+    "version": "1.0.0",
+    "title": "Nexora CTA Section",
+    "category": "design",
+    "description": "A call-to-action section with a title, description, and two buttons.",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Let's Build Something Great"
+        },
+        "description": {
+            "type": "string",
+            "default": "Ready to take your brand to the next level? Let's connect and turn your vision into results."
+        },
+        "primaryButtonText": {
+            "type": "string",
+            "default": "Contact Us"
+        },
+        "primaryButtonUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "secondaryButtonText": {
+            "type": "string",
+            "default": "Book for Free Consultation"
+        },
+        "secondaryButtonUrl": {
+            "type": "string",
+            "default": "#"
+        }
+    },
+    "textdomain": "child-nexora",
+    "style": "file:./style.css",
+    "render": "file:./render.php"
+}

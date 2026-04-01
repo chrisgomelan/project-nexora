@@ -1,0 +1,47 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "nexora/coming-soon",
+    "version": "1.0.0",
+    "title": "Coming Soon Section",
+    "category": "theme",
+    "icon": "clock",
+    "description": "Coming soon section with timer, text, subscribe form, and image.",
+    "keywords": [
+        "coming soon",
+        "timer",
+        "nexora"
+    ],
+    "textdomain": "child-nexora",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Building the Next Digital Frontier."
+        },
+        "description": {
+            "type": "string",
+            "default": "By blending marketing intelligence with emerging technologies, Nexora creates future-ready solutions for ambitious brands. Stay tuned."
+        },
+        "subTitle": {
+            "type": "string",
+            "default": "Connect Before We Go Live"
+        },
+        "imageUrl": {
+            "type": "string",
+            "default": "/wp-content/uploads/2026/03/digital-frontier-scaled.webp"
+        },
+        "imageAlt": {
+            "type": "string",
+            "default": "Digital Frontier"
+        }
+    },
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "style": "file:./style.css",
+    "render": "file:./render.php"
+}

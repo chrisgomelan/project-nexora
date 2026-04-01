@@ -1,0 +1,66 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "nexora/who-choose-us",
+    "version": "1.0.0",
+    "title": "Why Choose Us",
+    "category": "theme",
+    "description": "A feature grid detailing why brands choose Nexora.",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Why Brands Choose Nexora"
+        },
+        "feature1Icon": {
+            "type": "string",
+            "default": "/wp-content/uploads/2026/03/data-first.webp"
+        },
+        "feature1Title": {
+            "type": "string",
+            "default": "Data-First Strategy"
+        },
+        "feature1Text": {
+            "type": "string",
+            "default": "Every decision is backed by real-time analytics, not assumptions."
+        },
+        "feature2Icon": {
+            "type": "string",
+            "default": "/wp-content/uploads/2026/03/ai-driven.webp"
+        },
+        "feature2Title": {
+            "type": "string",
+            "default": "AI-Driven Optimization"
+        },
+        "feature2Text": {
+            "type": "string",
+            "default": "We use automation and predictive algorithms to continuously improve campaign performance."
+        },
+        "feature3Icon": {
+            "type": "string",
+            "default": "/wp-content/uploads/2026/03/full-funnel.webp"
+        },
+        "feature3Title": {
+            "type": "string",
+            "default": "Full-Funnel Growth Systems"
+        },
+        "feature3Text": {
+            "type": "string",
+            "default": "From awareness to conversion, we design integrated strategies that scale sustainably."
+        },
+        "feature4Icon": {
+            "type": "string",
+            "default": "/wp-content/uploads/2026/03/transparent.webp"
+        },
+        "feature4Title": {
+            "type": "string",
+            "default": "Transparent, Measurable Results"
+        },
+        "feature4Text": {
+            "type": "string",
+            "default": "Clear KPIs. Clear reporting. Clear ROI."
+        }
+    },
+    "textdomain": "child-nexora",
+    "style": "file:./style.css",
+    "render": "file:./render.php"
+}

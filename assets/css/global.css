@@ -1,0 +1,128 @@
+/* =========================================
+   Nexora Global Styles
+   Site-wide base styles and CSS variables.
+   ========================================= */
+
+/* ── Base resets ────────────────────────── */
+body {
+    overflow-x: hidden;
+}
+
+/* ── Typography Base ────────────────────── */
+h1 {
+    font-family: var(--wp--preset--font-family--poppins), sans-serif !important;
+    font-weight: 700 !important;
+    font-size: clamp(32px, 5vw, 64px) !important;
+    line-height: 1.19 !important;
+    letter-spacing: 0.09em !important;
+    text-transform: uppercase !important;
+    color: var(--wp--preset--color--nexora-navy, #072567) !important;
+}
+
+h2 {
+    font-family: var(--wp--preset--font-family--poppins), sans-serif !important;
+    font-weight: 700 !important;
+    font-size: clamp(24px, 4vw, 38px) !important;
+    line-height: 1 !important;
+    color: var(--wp--preset--color--nexora-navy, #072567) !important;
+}
+
+p,
+.wp-block-paragraph {
+    font-family: var(--wp--preset--font-family--poppins), sans-serif !important;
+    font-weight: 400 !important;
+    font-size: clamp(16px, 2.5vw, 24px) !important;
+    line-height: 1.5 !important;
+    color: var(--wp--preset--color--nexora-navy, #072567) !important;
+}
+
+/* ── Button: nexora-primary ────────────────
+   Defined globally because theme.json outputs
+   block variation CSS only when the core/button
+   block is detected by the block parser.
+   Custom blocks (render.php) bypass that detection,
+   so this guarantees the style is always available.
+   Values mirror theme.json core/button > nexora-primary.
+   ─────────────────────────────────────────── */
+.wp-block-button.is-style-nexora-primary .wp-block-button__link {
+    background-color: var(--wp--preset--color--nexora-navy, #072567) !important;
+    color: #ffffff !important;
+    border-radius: 10px !important;
+    padding: 10px 30px !important;
+    /* Adjusted for better text-to-box ratio */
+    min-width: 150px !important;
+    /* Target width from screenshot */
+    min-height: 60px !important;
+    /* Target height from screenshot */
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--wp--preset--font-family--poppins), sans-serif !important;
+    font-weight: 600 !important;
+    /* Global default is now 700 */
+    font-size: clamp(12px, 1.14vw, 15px) !important;
+    line-height: 1 !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+/* ── Hero & Header Button Override (Weight: 600) ───── */
+.nexora-header .wp-block-button.is-style-nexora-primary .wp-block-button__link,
+.nexora-hero .wp-block-button.is-style-nexora-primary .wp-block-button__link {
+    font-weight: 600 !important;
+}
+
+.wp-block-button.is-style-nexora-primary .wp-block-button__link:hover {
+    background-color: var(--wp--preset--color--nexora-accent, #3F4BE1) !important;
+    transform: translateY(-2px);
+    /* Slightly more pronounced hover */
+}
+
+/* ── Button: nexora-secondary ──────────────
+   Outlined version for secondary actions.
+   ─────────────────────────────────────────── */
+.wp-block-button.is-style-nexora-secondary .wp-block-button__link {
+    background-color: transparent !important;
+    color: var(--wp--preset--color--nexora-navy, #072567) !important;
+    border: 1px solid var(--wp--preset--color--nexora-navy, #072567) !important;
+    border-radius: 10px !important;
+    padding: 10px 30px !important;
+    min-width: 150px !important;
+    min-height: 60px !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    /* Keep consistent with primary for alignment */
+    font-family: var(--wp--preset--font-family--poppins), sans-serif !important;
+    font-weight: 600 !important;
+    font-size: clamp(12px, 1.14vw, 15px) !important;
+    line-height: 1 !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.wp-block-button.is-style-nexora-secondary .wp-block-button__link:hover {
+    background-color: transparent !important;
+    border: 2px solid var(--wp--preset--color--nexora-navy, #072567) !important;
+    color: var(--wp--preset--color--nexora-navy, #072567) !important;
+    transform: translateY(-2px);
+}
+
+/* ── Sticky Footer Fix ──────────────────────
+   Ensures the footer stays at the bottom of 
+   the viewport when a page has little content.
+   ─────────────────────────────────────────── */
+.wp-site-blocks {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.nexora-footer {
+    margin-top: auto;
+}

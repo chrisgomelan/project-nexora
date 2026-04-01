@@ -1,0 +1,22 @@
+{
+    "apiVersion": 3,
+    "name": "nexora/scroll-curtain-reveal",
+    "title": "Scroll Curtain Reveal",
+    "category": "theme",
+    "description": "A cinematic reveal section where columns slide in from the sides (like curtains) or fade in on scroll.",
+    "attributes": {
+        "columnCount": {
+            "type": "number",
+            "default": 3
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#FFFFFF"
+        }
+    },
+    "textdomain": "nexora",
+    "editorScript": "file:./index.js",
+    "script": "file:./view.js",
+    "style": "file:./style.css",
+    "render": "file:./render.php"
+}

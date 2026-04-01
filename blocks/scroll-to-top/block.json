@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "nexora/scroll-to-top",
+    "title": "Scroll To Top",
+    "category": "theme",
+    "description": "A reusable scroll-to-top floating button.",
+    "attributes": {
+        "showOnScroll": {
+            "type": "number",
+            "default": 300
+        }
+    },
+    "textdomain": "nexora",
+    "script": "file:./view.js",
+    "style": "file:./style.css",
+    "render": "file:./render.php"
+}

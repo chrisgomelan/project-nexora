@@ -1,0 +1,108 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "nexora/footer",
+    "version": "1.0.0",
+    "title": "Nexora Footer",
+    "category": "theme",
+    "description": "A custom footer block for Nexora with logo, navigation, social icons, and contact info.",
+    "attributes": {
+        "logoUrl": {
+            "type": "string",
+            "default": "/wp-content/uploads/2026/03/nexora-logo.webp"
+        },
+        "logoWidth": {
+            "type": "number",
+            "default": 276
+        },
+        "navItems": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "HOME",
+                    "url": "/"
+                },
+                {
+                    "label": "ABOUT",
+                    "url": "/about"
+                },
+                {
+                    "label": "SERVICES",
+                    "url": "/services"
+                },
+                {
+                    "label": "CAREERS",
+                    "url": "/careers"
+                },
+                {
+                    "label": "CONTACT",
+                    "url": "/contact"
+                },
+                {
+                    "label": "PRIVACY POLICY",
+                    "url": "/privacy-policy"
+                },
+                {
+                    "label": "TERMS OF SERVICE",
+                    "url": "/terms-of-service"
+                }
+            ]
+        },
+        "socialIcons": {
+            "type": "array",
+            "default": [
+                {
+                    "platform": "facebook",
+                    "iconClass": "fab fa-facebook-f",
+                    "url": "#"
+                },
+                {
+                    "platform": "instagram",
+                    "iconClass": "fab fa-instagram",
+                    "url": "#"
+                },
+                {
+                    "platform": "linkedin",
+                    "iconClass": "fab fa-linkedin-in",
+                    "url": "#"
+                },
+                {
+                    "platform": "x-twitter",
+                    "iconClass": "fab fa-x-twitter",
+                    "url": "#"
+                }
+            ]
+        },
+        "email": {
+            "type": "string",
+            "default": ""
+        },
+        "address": {
+            "type": "string",
+            "default": "12TH FLOOR, ONE TECH PLAZA, BONIFACIO GLOBAL CITY, TAGUIG CITY, PHILIPPINES"
+        },
+        "phone": {
+            "type": "string",
+            "default": "+63 2 8567 4390"
+        },
+        "hoursTitle": {
+            "type": "string",
+            "default": "MONDAY – FRIDAY"
+        },
+        "hoursTime": {
+            "type": "string",
+            "default": "9:00 AM – 6:00 PM (GMT+8)"
+        },
+        "hoursNote": {
+            "type": "string",
+            "default": "CONSULTATIONS BY SCHEDULE"
+        },
+        "copyright": {
+            "type": "string",
+            "default": "© 2025 ALL RIGHTS RESERVED"
+        }
+    },
+    "textdomain": "child-nexora",
+    "style": "file:./style.css",
+    "render": "file:./render.php"
+}

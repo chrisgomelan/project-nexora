@@ -1,0 +1,54 @@
+/* =========================================
+   nexora/scroll-to-top Styles
+   ========================================= */
+
+.nexora-scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease-in-out;
+}
+
+.nexora-scroll-to-top.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.nexora-scroll-to-top__button {
+    background-color: var(--wp--preset--color--nexora-accent, #3F4BE1);
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nexora-scroll-to-top__button:hover {
+    background-color: var(--wp--preset--color--nexora-navy, #072567);
+    transform: translateY(-3px);
+}
+
+@media (max-width: 991px) {
+    .nexora-scroll-to-top {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .nexora-scroll-to-top__button {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}

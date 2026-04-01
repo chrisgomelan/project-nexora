@@ -1,0 +1,49 @@
+/* =========================================
+   nexora/cta-section Block Styles
+   ========================================= */
+
+.nexora-cta {
+    width: 100%;
+    background-color: var(--wp--preset--color--nexora-white, #FFFFFF);
+    min-height: 498px;
+    /* Precise height from mockup */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+.nexora-cta__inner {
+    max-width: 100%;
+    /* Constrain text width for readability */
+    margin: 0 auto;
+}
+
+.nexora-cta__title {
+    margin: 0 0 24px 0 !important;
+}
+
+.nexora-cta__description {
+    margin: 0 0 40px 0 !important;
+    line-height: 1.5 !important;
+}
+
+.nexora-cta__buttons .wp-block-buttons {
+    justify-content: center;
+    gap: 20px;
+}
+
+/* ── Responsive ────────────────────────── */
+@media (max-width: 600px) {
+    .nexora-cta {
+        min-height: auto;
+        padding: 60px 20px;
+    }
+
+    .nexora-cta__buttons .wp-block-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
